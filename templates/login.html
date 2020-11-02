@@ -12,9 +12,9 @@
 </head>
 <body>
     <div class="container mt-4">
-      <form action="submit", method="POST">
+      <form action="submit", method="POST">{% csrf_token %}
          <h2>SOS PET</h2>
-         
+          
          <div class="form-group">
            <label for="username">Usuário:</label>
            <input type="text", class="form-control" id="username" name="username"
@@ -29,6 +29,9 @@
         </div>
         
         <div>
+          <div class="alert alert-success">
+            <strong>Success!</strong> Indicates a successful or positive action.
+          </div>
           <button type="button" class="btn btn-success">Entrar</button>
         </div>
       </form>
